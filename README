@@ -1,0 +1,41 @@
+edgecase
+========
+
+Edgecase is a GUI test runner that handles multiple (C++) test frameworks.
+
+The basic usage is to point edgecase to a directory containing your test
+executables. Edgecase can run all tests within it (and its subdirs,
+if desired) and then report run/pass counts, failure messages, benchmark
+results, etc.
+
+Currently edgecase supports:
+  * GoogleTest (http://code.google.com/p/googletest/)
+  * QTestLib   (http://qt-project.org/doc/qt-4.8/qtestlib-manual.html)
+
+To support multiple testing frameworks, some sort of convention has to be
+followed for edgecase to discover test executables at runtime and handle
+them properly (different command-line args, different output formats, etc.)
+Thus edgecase requires a test executable to have one of several built-in
+filename prefixes:
+  * GoogleTest - 'gtest_*', 'gtst_*'
+  * QTestLib   - 'qtest_*', 'qtst_*', and 'tst_*'
+
+------------------
+Building
+------------------
+
+Edgecase is built on top of the Qt framework (v4.6+)
+
+  http://qt-project.org/downloads
+
+Download & install if needed, per instructions there.
+Note - edgecase hasn't been tested with Qt5.
+
+Using QtCreator:
+  Open the project file (edgecase.pro) in QtCreator.
+  Click the "Build" button.
+
+From command-line:
+  $ qmake edgecase.pro
+  $ make
+
