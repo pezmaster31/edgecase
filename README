@@ -1,8 +1,8 @@
 edgecase
 ========
 
-Edgecase is a GUI test runner that handles running a whole suite of test
-executables, that can be written using multiple (C++) test frameworks.
+Edgecase is a GUI test runner that handles a suite of test executables,
+that can be written using multiple test frameworks.
 
 The basic usage is to point edgecase to a directory containing your test
 executables. Edgecase can run all tests within it (and its subdirs,
@@ -20,6 +20,9 @@ Thus edgecase requires a test executable to have one of several built-in
 filename prefixes:
   * GoogleTest - 'gtest_*', 'gtst_*'
   * QTestLib   - 'qtest_*', 'qtst_*', and 'tst_*'
+
+For more info on motivation & simple screenshots, check this announcement blog:
+  http://blog.gkno.me/post/40273863810/introducing-edgecase
 
 ------------------
 Building
